@@ -26,6 +26,32 @@ const app = Vue.createApp({
       this.addNewTodo();
     },
 
+    updateTodos() {
+      fetch("http://localhost:3000/todos/1", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          description: "",
+          done: true,
+        }),
+      })
+        .then((res) => {
+          if (res.ok) {
+            console.log("PUT request successful");
+          } else {
+            console.log("Error");
+          }
+          return res;
+        })
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+        .catch((error) => console.log(error));
+      this.saveTodos();
+      this.loadTodos();
+    },
+
     async deleteTodos() {
       this.todos.forEach((todo) => {
         if (todo.done === true) {

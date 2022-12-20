@@ -1,24 +1,14 @@
 {
   "todos": [
     {
-      "description": "learn html",
+      "description": "CSS Learnen",
+      "done": false,
+      "id": 1
+    },
+    {
+      "description": "HTML Learn",
       "done": false,
       "id": 2
-    },
-    {
-      "description": "learn vue",
-      "done": false,
-      "id": 4
-    },
-    {
-      "description": "learn javascript ",
-      "done": false,
-      "id": 5
-    },
-    {
-      "description": "saleh",
-      "done": false,
-      "id": 6
     }
   ]
 }
